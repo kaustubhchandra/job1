@@ -23,4 +23,4 @@ phases:
       - printf '[{"name":"faragtecontainer","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions.json
       - cat imagedefinitions.json
 artifacts:
-  files: *
+  files: **/*
