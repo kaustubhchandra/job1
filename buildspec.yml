@@ -14,12 +14,12 @@ phases:
       - echo Build started on `date`
       - echo Building the Docker image...          
       - docker build -t catnip:latest .
-      - docker tag catnip:latest 857848422201.dkr.ecr.ap-south-1.amazonaws.com/catnip:latest    
+      - docker tag catnip:latest 857848422201.dkr.ecr.ap-south-1.amazonaws.com/for-pipeline:latest    
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push 857848422201.dkr.ecr.ap-south-1.amazonaws.com/catnip:latest
+      - docker push 857848422201.dkr.ecr.ap-south-1.amazonaws.com/for-pipeline:latest
       - printf '[{"name":"faragtecontainer","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions.json
       - cat imagedefinitions.json
 artifacts:
