@@ -20,7 +20,7 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push 857848422201.dkr.ecr.ap-south-1.amazonaws.com/for-pipeline:latest
-      - printf '[{"name":"faragtecontainer","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions.json
+      - printf '[{"name":"kk","imageUri":"%s"}]' $REPOSITORY_URI:latest > imagedefinitions.json
       - cat imagedefinitions.json
 artifacts:
     files:
